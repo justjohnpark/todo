@@ -8,7 +8,13 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override'); 
 
 // configuration ======================================
-mongoose.connect(database.url);    
+mongoose.connect(database.url || 'mongodb://localhost/todo-variation-1');    
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  
+});
 
 app.use(express.static(__dirname + '/public'));                 
 app.use(morgan('dev'));                                         
