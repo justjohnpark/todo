@@ -1,6 +1,6 @@
-angular.module('todo', ['todoController', 'todoService']);
-angular.module('todo').config(Configuration);
+  angular.module('todo', ['ngRoute']);
+  angular.module('todo').config(Configuration);
 
-function Configuration() {
+  function Configuration() {
 
-}
+  }
