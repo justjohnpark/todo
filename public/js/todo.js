@@ -1,5 +1,6 @@
-var todo = angular.module('todo', ['todoController', 'todoService']);
+angular.module('todo', ['todoController', 'todoService']);
+angular.module('todo').config(Configuration);
 
-function mainController() {
-    
+function Configuration() {
+
 }
